@@ -1,0 +1,182 @@
+body {
+    overflow: hidden;
+    background-image: url("#");
+    background-position: center;
+    background-size: cover;
+}
+
+* {
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+.maincontentz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.leftBoxx {
+    display: flex;
+    flex-direction: column;
+}
+
+.miniBoxx1 {
+    height: 150px;
+    width: 400px;
+    margin: 20px;
+    padding: 20px;
+    text-align: left;
+    background-color: lightgoldenrodyellow;
+}
+
+.miniBoxx1 h1{
+    color: darkgoldenrod;
+    font-size: 40px;
+    line-height: 1.4px;
+}
+
+.miniBoxx1 p{
+    color: darkgoldenrod;
+    font-size: 20px;
+    overflow-wrap: break-word;
+    line-height: 20px;
+    text-align: justify;
+}
+
+.miniBoxx2 {
+    height: 250px;
+    width: 400px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: lightsalmon;
+}
+
+.miniBoxx2 h1{
+    color: darkred;
+    font-size: 40px;
+    line-height: 1.4px;
+}
+
+.miniBoxx2 .Liztt{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.miniBoxx2 p{
+    color: darkred;
+    font-size: 20px;
+    overflow-wrap: break-word;
+    line-height: 10px;
+    text-align: justify;
+}
+
+.midBoxx {
+    height: auto;
+    width: 400px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: lightskyblue;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.midBoxx h1{
+    color: darkblue;
+    line-height: 1.4px;
+    font-size: 40px;
+}
+
+.heightInput, .weightInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px
+}
+
+.heightInput label, .weightInput label {
+    font-size: 20px;
+    font-weight: bold;
+    color: darkblue;
+    text-align: left;
+}
+
+.selectt, .inputtz {
+    flex: 1;
+    height: 45px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #143670;
+    border-radius: 6px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.buttonz {
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonz button {
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.resett {
+    background-color: lightcoral;
+    color: white;
+}
+
+.resett:hover {
+    background-color: crimson;
+}
+
+.calculatee {
+    background-color: mediumseagreen;
+    color: white;
+}
+
+.calculatee:hover {
+    background-color: seagreen;
+}
+
+.outputt {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.outputt h1 {
+    font-size: 20px;
+    color: darkblue;
+}
+
+#rezultt {
+    font-size: 30px;
+    font-weight: bold;
+    color: darkred;
+}
+
+.rightBoxx {
+    height: 600px;
+    width: 400px;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightslategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

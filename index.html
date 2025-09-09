@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="Image/png" href="Assets/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>BMI_Calculator_535240035</title>
+</head>
+<body>
+    <div class="maincontentz">
+        <div class="leftBoxx">
+            <div class="miniBoxx1">
+                <h1>What is BMI?</h1>
+                <p>Body Mass Index (BMI) is a simple measure to assess nutritional status,
+                    It is calculated as weight (kg) divided by height squared (m²),
+                    Used as an indicator of health based on weight and height.</p>
+            </div>
+
+            <div class="miniBoxx2">
+                <h1>BMI Categories</h1>
+                <div class="Liztt">
+                    <div class="leftLizt">
+                        <p>Underweight</p>
+                        <p>Normal Weight</p>
+                        <p>Overweight</p>
+                        <p>Obese (Class I)</p>
+                        <p>Obese (Class II)</p>
+                        <p>Obese (Class III)</p>
+                    </div>
+                    <div class="rightLizt">
+                        <p>: &lt; 18.5</p>
+                        <p>: 18.5 - 24.9</p>
+                        <p>: 25 - 29.9</p>
+                        <p>: 30 - 34.9</p>
+                        <p>: 35 - 39.9</p>
+                        <p>: &ge; 40</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="midBoxx">
+            <h1>BMI Calculator</h1>
+
+            <div class="heightInput">
+                <label for="heightz">Height: </label>
+                <select class="selectt" id="heightUnitz">
+                    <option selected value="Centimeters">Centimeters</option>
+                    <option value="Feet">Feet</option>
+                    <option value="Inch">Inch</option>
+                    <option value="Meter">Meter</option>
+                </select>
+                <input type="number" id="inpHeight" placeholder="Input Height.." min="0" class="inputtz">
+            </div>
+
+            <div class="weightInput">
+                <label for="heightz">Weight: </label>
+                <select class="selectt" id="weightUnitz">
+                    <option selected value="Kg">Kg</option>
+                    <option value="Pound">Pound</option>
+                </select>
+                <input type="number" id="inpWeight" placeholder="Input Weight.." min="0" class="inputtz">
+            </div>
+
+            <div class="buttonz">
+                <button class="resett">Reset</button>
+                <button class="calculatee">Calculate</button>
+            </div>
+
+            <div class="outputt">
+                <h1>Your BMI Score</h1>
+                <p><span id="rezultt">00.00</span></p>
+            </div>
+        </div>
+
+        <div class="rightBoxx"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
