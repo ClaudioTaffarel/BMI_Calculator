@@ -30,10 +30,40 @@ btnCalculate.addEventListener("click", () => {
     const bmi = weight / (height * height);
 
     resultBox.innerHTML = bmi.toFixed(2);
+
+    document.querySelectorAll(".bmiBox").forEach(box => {
+        box.classList.remove("highlight");
+    });
+
+    let categoryIndex = -1;
+
+    if (bmi < 18.5) {
+        categoryIndex = 0;
+    } else if (bmi >= 18.5 && bmi < 25) {
+        categoryIndex = 1;
+    } else if (bmi >= 25 && bmi < 30) {
+        categoryIndex = 2;
+    } else if (bmi >= 30 && bmi < 35) {
+        categoryIndex = 3;
+    } else if (bmi >= 35 && bmi < 40) {
+        categoryIndex = 4;
+    } else if (bmi >= 40) {
+        categoryIndex = 5;
+    }
+
+    if (categoryIndex !== -1) {
+        const boxes = document.querySelectorAll(".bmiBox");
+        boxes[categoryIndex].classList.add("highlight");
+        boxes[categoryIndex].scrollIntoView({ behavior: "smooth", block: "center" });
+    }
 });
+
 
 btnReset.addEventListener("click", () => {
     heightInput.value = "";
     weightInput.value = "";
     resultBox.innerHTML = "00.00";
+    document.querySelectorAll(".bmiBox").forEach(box => {
+        box.classList.remove("highlight");
+    });
 });

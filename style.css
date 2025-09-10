@@ -1,12 +1,36 @@
+:root{
+    --darkyelo: #96721d;
+    --darkredd: #701919;
+    --darkbluew: #274c69;
+    --corall: #e06060;
+    --darkcorall: #8c2929;
+    --greeen: #6fbf69;
+    --darkgreeenn: #437840;
+}
+
 body {
     overflow: hidden;
-    background-image: url("#");
+    background-image: url("Assets/BG.PNG");
     background-position: center;
     background-size: cover;
 }
 
 * {
     font-family: "Pixelify Sans", sans-serif;
+}
+
+.pencill {
+    position: absolute;
+    z-index: 100;
+    height: 350px;
+    left: -60px;
+    top: 200px;
+    animation: naikTurun 2s ease-in-out infinite;
+}
+
+@keyframes naikTurun {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(20px); }
 }
 
 .maincontentz {
@@ -27,17 +51,19 @@ body {
     margin: 20px;
     padding: 20px;
     text-align: left;
-    background-color: lightgoldenrodyellow;
+    background-image: url("Assets/MiniBox3.PNG");
+    background-position: center;
+    background-size: cover;
 }
 
 .miniBoxx1 h1{
-    color: darkgoldenrod;
+    color: var(--darkyelo);
     font-size: 40px;
     line-height: 1.4px;
 }
 
 .miniBoxx1 p{
-    color: darkgoldenrod;
+    color: var(--darkyelo);
     font-size: 20px;
     overflow-wrap: break-word;
     line-height: 20px;
@@ -50,11 +76,13 @@ body {
     margin: 20px;
     padding: 20px;
     text-align: center;
-    background-color: lightsalmon;
+    background-image: url("Assets/MiniBox2.PNG");
+    background-position: center;
+    background-size: cover;
 }
 
 .miniBoxx2 h1{
-    color: darkred;
+    color: var(--darkredd);
     font-size: 40px;
     line-height: 1.4px;
 }
@@ -66,7 +94,7 @@ body {
 }
 
 .miniBoxx2 p{
-    color: darkred;
+    color: var(--darkredd);
     font-size: 20px;
     overflow-wrap: break-word;
     line-height: 10px;
@@ -79,50 +107,52 @@ body {
     margin: 20px;
     padding: 20px;
     text-align: center;
-    background-color: lightskyblue;
+    background-image: url("Assets/MidBox.PNG");
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
 .midBoxx h1{
-    color: darkblue;
+    color: var(--darkbluew);
     line-height: 1.4px;
     font-size: 40px;
 }
 
-.heightInput, .weightInput {
+.midBoxx .heightInput, .midBoxx .weightInput {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px
 }
 
-.heightInput label, .weightInput label {
+.midBoxx .heightInput label, .midBoxx .weightInput label {
     font-size: 20px;
     font-weight: bold;
-    color: darkblue;
+    color: var(--darkbluew);
     text-align: left;
 }
 
-.selectt, .inputtz {
+.midBoxx .selectt, .midBoxx .inputtz {
     flex: 1;
     height: 45px;
     padding: 5px;
     font-size: 14px;
-    border: 1px solid #143670;
+    border: 1px solid var(--darkbluew);
     border-radius: 6px;
     outline: none;
     box-sizing: border-box;
 }
 
-.buttonz {
+.midBoxx .buttonz {
     margin: 20px;
     display: flex;
     justify-content: space-around;
 }
 
-.buttonz button {
+.midBoxx .buttonz button {
     width: 150px;
     height: 50px;
     margin: 10px;
@@ -134,40 +164,40 @@ body {
     transition: 0.2s ease;
 }
 
-.resett {
-    background-color: lightcoral;
+.midBoxx .resett {
+    background-color: var(--corall);
     color: white;
 }
 
-.resett:hover {
-    background-color: crimson;
+.midBoxx .resett:hover {
+    background-color: var(--darkcorall);
 }
 
-.calculatee {
-    background-color: mediumseagreen;
+.midBoxx .calculatee {
+    background-color: var(--greeen);
     color: white;
 }
 
-.calculatee:hover {
-    background-color: seagreen;
+.midBoxx .calculatee:hover {
+    background-color: var(--darkgreeenn);
 }
 
-.outputt {
+.midBoxx .outputt {
     background-color: white;
     border-radius: 10px;
     padding: 15px;
     margin-top: 10px;
 }
 
-.outputt h1 {
+.midBoxx .outputt h1 {
     font-size: 20px;
-    color: darkblue;
+    color: var(--darkbluew);
 }
 
-#rezultt {
+.midBoxx #rezultt {
     font-size: 30px;
     font-weight: bold;
-    color: darkred;
+    color: var(--darkredd);
 }
 
 .rightBoxx {
@@ -175,8 +205,78 @@ body {
     width: 400px;
     margin: 20px;
     padding: 20px;
-    background-color: lightslategray;
+    background-image: url("Assets/RightBox.PNG");
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.screen {
+    position: relative;
+    bottom: 30px;
+    height: 500px;
+    width: 350px;
+    background-color: black;
+    overflow-y: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.screenContentz {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bmiBox {
+    display: flex;
+    align-items: flex-start;
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.bmiImg {
+    flex: 0 0 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bmiImg img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.bmiText {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.bmiText h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #ffcc00;
+}
+
+.bmiText p {
+    margin: 3px 0;
+    font-size: 13px;
+}
+
+.bmiText ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 12px;
+}
+
+.bmiBox.highlight {
+    border: 2px solid #ffcc00;
+    background-color: #333333;
+    box-shadow: 0 0 10px #ffcc00;
 }
