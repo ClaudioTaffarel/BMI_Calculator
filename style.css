@@ -6,6 +6,10 @@
     --darkcorall: #8c2929;
     --greeen: #6fbf69;
     --darkgreeenn: #437840;
+    --darkgreyishh: #303030;
+    --greyishh: #424242;
+    --yeloo: #ffcc00;
+    --lightbluew: #118bd6;
 }
 
 body {
@@ -15,22 +19,12 @@ body {
     background-size: cover;
 }
 
+h1:hover {
+    transform: scale(1.1);
+}
+
 * {
     font-family: "Pixelify Sans", sans-serif;
-}
-
-.pencill {
-    position: absolute;
-    z-index: 100;
-    height: 350px;
-    left: -60px;
-    top: 200px;
-    animation: naikTurun 2s ease-in-out infinite;
-}
-
-@keyframes naikTurun {
-    0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(20px); }
 }
 
 .maincontentz {
@@ -50,22 +44,24 @@ body {
     width: 400px;
     margin: 20px;
     padding: 20px;
-    text-align: left;
+    text-align: center;
     background-image: url("Assets/MiniBox3.PNG");
     background-position: center;
     background-size: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .miniBoxx1 h1{
     color: var(--darkyelo);
     font-size: 40px;
     line-height: 1.4px;
+    transition: transform 0.3s ease;
 }
 
 .miniBoxx1 p{
     color: var(--darkyelo);
     font-size: 20px;
-    overflow-wrap: break-word;
     line-height: 20px;
     text-align: justify;
 }
@@ -79,12 +75,15 @@ body {
     background-image: url("Assets/MiniBox2.PNG");
     background-position: center;
     background-size: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .miniBoxx2 h1{
     color: var(--darkredd);
     font-size: 40px;
     line-height: 1.4px;
+    transition: transform 0.3s ease;
 }
 
 .miniBoxx2 .Liztt{
@@ -96,60 +95,77 @@ body {
 .miniBoxx2 p{
     color: var(--darkredd);
     font-size: 20px;
-    overflow-wrap: break-word;
     line-height: 10px;
     text-align: justify;
 }
 
 .midBoxx {
-    height: auto;
+    height: 480px;
     width: 400px;
-    margin: 20px;
     padding: 20px;
+    gap: 15px;
     text-align: center;
     background-image: url("Assets/MidBox.PNG");
     background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    border-radius: 12px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.396);
 }
 
 .midBoxx h1{
     color: var(--darkbluew);
     line-height: 1.4px;
     font-size: 40px;
+    transition: transform 0.3s ease;
 }
 
 .midBoxx .heightInput, .midBoxx .weightInput {
+    position: relative;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    padding: 12px;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px
+    gap: 10px;   
+    margin-bottom: 8px;
+}
+
+.midBoxx .heightInput:hover, .midBoxx .weightInput:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 .midBoxx .heightInput label, .midBoxx .weightInput label {
-    font-size: 20px;
+    position: absolute;
+    top: -14px;
+    left: 12px;
+    background: white;
+    padding: 0 6px;
+    font-size: 16px;
     font-weight: bold;
     color: var(--darkbluew);
-    text-align: left;
+    border-radius: 4px;
 }
 
 .midBoxx .selectt, .midBoxx .inputtz {
-    flex: 1;
+    width: 200px;
     height: 45px;
-    padding: 5px;
-    font-size: 14px;
-    border: 1px solid var(--darkbluew);
-    border-radius: 6px;
+    padding: 8px;
+    font-size: 15px;
+    border: 2px solid transparent;
+    border-radius: 10px;
     outline: none;
-    box-sizing: border-box;
+    transition: all 0.25s ease;
 }
 
 .midBoxx .buttonz {
-    margin: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .midBoxx .buttonz button {
@@ -157,9 +173,9 @@ body {
     height: 50px;
     margin: 10px;
     font-size: 20px;
+    border-radius: 8px;
     font-weight: bold;
     border: none;
-    border-radius: 8px;
     cursor: pointer;
     transition: 0.2s ease;
 }
@@ -185,8 +201,7 @@ body {
 .midBoxx .outputt {
     background-color: white;
     border-radius: 10px;
-    padding: 15px;
-    margin-top: 10px;
+    padding: 10px;
 }
 
 .midBoxx .outputt h1 {
@@ -211,72 +226,135 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.396);
 }
 
-.screen {
+.rightBoxx .screen {
     position: relative;
     bottom: 30px;
     height: 500px;
     width: 350px;
-    background-color: black;
+    background-color: var(--darkgreyishh);
     overflow-y: auto;
     padding: 10px;
     box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.screenContentz {
+.rightBoxx .screenContentz {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.bmiBox {
+.rightBoxx .bmiBox {
     display: flex;
-    align-items: flex-start;
-    background: #1a1a1a;
+    align-items: center; 
+    background: var(--greyishh);
     border-radius: 10px;
     padding: 10px;
     color: white;
 }
 
-.bmiImg {
-    flex: 0 0 80px;
+.rightBoxx .bmiBox .bmiImg {
+    width: 80px;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0; 
 }
 
-.bmiImg img {
-    width: 60px;
-    height: 60px;
+.rightBoxx .bmiBox .bmiImg img {
+    width: 80px;
+    height: 80px;
     object-fit: contain;
 }
 
-.bmiText {
-    flex: 1;
-    margin-left: 10px;
+.rightBoxx .bmiBox .bmiText {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.bmiText h3 {
+.rightBoxx .bmiBox .bmiText h3 {
     margin: 0;
     font-size: 16px;
-    color: #ffcc00;
+    color: var(--greeen);
 }
 
-.bmiText p {
-    margin: 3px 0;
+.bmiBox .bmiText p {
+    margin: 3px;
     font-size: 13px;
 }
 
-.bmiText ul {
+.bmiBox .bmiText ul {
     margin: 0;
     padding-left: 18px;
     font-size: 12px;
 }
 
 .bmiBox.highlight {
-    border: 2px solid #ffcc00;
-    background-color: #333333;
-    box-shadow: 0 0 10px #ffcc00;
+    border: 2px solid var(--yeloo);
+    background-color: var(--darkgreyishh);
+    box-shadow: 0 0 10px var(--yeloo);
+}
+
+.pencill {
+    position: absolute;
+    z-index: 100;
+    height: 350px;
+    left: -60px;
+    top: 200px;
+    animation: naikTurun 2s ease-in-out infinite;
+}
+
+.fingerr {
+    position: absolute;
+    z-index: 100;
+    height: 300px;
+    left: 1350px;
+    top: 50px;
+    animation: naikTurun 2s ease-in-out infinite;
+}
+
+.tapee {
+    position: absolute;
+    z-index: 100;
+    height: 100px;
+    left: 50px;
+    top: 60px;
+}
+
+.pinz {
+    position: absolute;
+    z-index: 100;
+    height: 120px;
+    left: 400px;
+    top: 550px;
+}
+
+.mnmszz {
+    position: absolute;
+    z-index: 100;
+    height: 120px;
+    left: 440px;
+    top: 0px;
+}
+
+.sticker {
+    position: absolute;
+    z-index: -1;
+    height: 150px;
+    left: 900px;
+    top: -35px;
+}
+
+
+@keyframes naikTurun {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(20px); }
 }
