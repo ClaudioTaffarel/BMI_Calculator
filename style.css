@@ -10,6 +10,8 @@
     --greyishh: #424242;
     --yeloo: #ffcc00;
     --lightbluew: #118bd6;
+    --dustyblue: #acd7fa;
+    --whitezz: #ffffff;
 }
 
 body {
@@ -123,7 +125,7 @@ h1:hover {
 
 .midBoxx .heightInput, .midBoxx .weightInput {
     position: relative;
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--dustyblue);
     backdrop-filter: blur(8px);
     padding: 12px;
     transition: all 0.3s ease;
@@ -144,7 +146,7 @@ h1:hover {
     position: absolute;
     top: -14px;
     left: 12px;
-    background: white;
+    background: var(--whitezz);
     padding: 0 6px;
     font-size: 16px;
     font-weight: bold;
@@ -182,7 +184,7 @@ h1:hover {
 
 .midBoxx .resett {
     background-color: var(--corall);
-    color: white;
+    color: var(--whitezz);
 }
 
 .midBoxx .resett:hover {
@@ -191,7 +193,7 @@ h1:hover {
 
 .midBoxx .calculatee {
     background-color: var(--greeen);
-    color: white;
+    color: var(--whitezz);
 }
 
 .midBoxx .calculatee:hover {
@@ -199,7 +201,7 @@ h1:hover {
 }
 
 .midBoxx .outputt {
-    background-color: white;
+    background-color: var(--whitezz);
     border-radius: 10px;
     padding: 10px;
 }
@@ -255,7 +257,7 @@ h1:hover {
     background: var(--greyishh);
     border-radius: 10px;
     padding: 10px;
-    color: white;
+    color: var(--whitezz);
 }
 
 .rightBoxx .bmiBox .bmiImg {
